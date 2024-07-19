@@ -10,11 +10,11 @@
 // WAY OF DECLARING FUNCTION
 // Function Statement or Traditional Function
 // Hoisting means => declaring the function statement and variables(which are declared with variable) are going to be taken at the top of there scope
-// sum(9, 8);
-// function sum(num1, num2) {
-//     return num1 + num2;
-// }
-// multiply(1, 2);
+sum(9, 8);
+function sum(num1, num2) {
+    return num1 + num2;
+}
+multiply(1, 2);
 // Function Expression
 var multiply = function (num1, num2) {
     return num1 * num2;
@@ -95,8 +95,7 @@ function abc() {
     console.log("Hello from abc function");
 }
 console.log("before iife");
-(
-    function () {
+(function () {
         console.log("Hello from IIFE function");
     }
 )();
