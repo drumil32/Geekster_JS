@@ -201,3 +201,5 @@ const arr = [1, 2, 3];
 // }
 // const ans = calculateMultiplication(1,2,3,4,5,6);
 // console.log(ans);
+
+// let & const can't be used before its declaration but var can be used before its declaration and value of var variable before its declaration is undefined.

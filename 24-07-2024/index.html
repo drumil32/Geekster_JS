@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            border: 2px solid black;
+            height: 100px;
+        }
+
+        .clicked-paragraph {
+            background-color: blue;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<!--
+    three ways to add css
+    inline,internal,external
+    -->
+
+<!-- 
+    two ways to add js
+    internal
+    external
+    -->
+
+<!-- 
+        events
+            weak up
+            fresh 
+            breakfast
+
+
+        user interaction is known as events
+
+        types of events
+        
+            -> mouse events
+                -> click event
+                -> double click event
+            -> keyboard events
+                key press event
+                key down event => user has finger on the key => he pressing down the key
+                key up event
+            -> scroll events
+
+     -->
+
+<body>
+    <p class="first" style="border: 2px solid red;" id="first-1">hello1</p>
+    <p class="first" style="border: 2px solid red;" id="first-2">hello2</p>
+    <script>
+        // const arr = [1, 2, 3, 4, 5, 6, 6, 7];
+        const arr = [
+            {
+                num: 1
+            },
+            {
+                num: 2
+            },
+            {
+                num: 3
+            }
+        ]
+
+        function myForEach(arr, callback) {
+            for (var i = 0; i < arr.length; i++) {
+                callback(arr[i], i, arr);
+            }
+        }
+
+        const result = arr.forEach((element, index, actulArray) => {
+            actulArray[index].num += 10;
+            element.num += 10;
+            console.log(element, index, actulArray);
+        })
+        console.log(arr);
+        console.log(result);
+        const outputOfClassName = document.getElementsByClassName("first");
+        console.log(outputOfClassName);
+        // const firstParagraph = outputOfClassName[0];
+        const firstParagraph = document.getElementById("first-1");
+        firstParagraph.style.backgroundColor = "red";
+        console.log(firstParagraph)
+        firstParagraph.addEventListener("click", function () {
+            console.log(firstParagraph.innerText);
+            firstParagraph.innerText = "I changed this paragraph";
+            console.log(firstParagraph.innerText);
+            // firstParagraph.style.backgroundColor = "red";
+            // firstParagraph.setAttribute("style", "background-color: red;font-size: 50px;");
+            console.log(firstParagraph.classList)
+            firstParagraph.classList.add("clicked-paragraph");
+            alert("Hey! you clicked on the first paragraph");
+        });
+        firstParagraph.addEventListener("click", function () {
+            console.log("hhow are you");
+        });
+        firstParagraph.addEventListener("click", function () {
+            console.log("second on click");
+        });
+        // firstParagraph.onclick = ()=>{
+        // }
+        // firstParagraph.onclick = ()=>{
+        //     console.log("second on click");
+        // }
+    </script>
+</body>
+
+</html>
