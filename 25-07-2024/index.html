@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first,
+        .second {
+            border: 2px solid black;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p class="first" id="first-1">please click</p>
+    <p class="second" id="second-1">this is another p tag</p>
+    <button id="change-color-btn">Change Color Bro!</button> -->
+    <!-- <form action="#" id="form">
+        <input type="text">
+        <button type="submit">Submit</button>
+    </form>
+    <a href="https://www.youtube.com/" target="_blank" id="link">You Tube</a> -->
+    <p class="first" id="third">Initial</p>
+
+    <button id="bgColorChangeEnable">Bg clolor change Enable</button>
+    <button id="bgColorChangeDisable">Bg clolor change Disable</button>
+
+    <button id="txtChangeEnable">Text change Enable</button>
+    <button id="txtChangeDisable">Text change Disable</button>
+    <!-- <button id="disable-link">Disable Link</button>
+    <button id="enable-link">Enable Link</button> -->
+    <script>
+        const bgColorChangeEnableBtn = document.getElementById("bgColorChangeEnable");
+        const bgColorChangeDiableBtn = document.getElementById("bgColorChangeDisable");
+
+        const txtChangeEnableBtn = document.getElementById("txtChangeEnable");
+        const txtChangeDiableBtn = document.getElementById("txtChangeDisable");
+
+
+        const ptag = document.getElementById("third");
+        const bgColorChange = () => {
+            ptag.style.backgroundColor = "red";
+        }
+        const innerTextChange = () => {
+            ptag.innerText = "Changed";
+        }
+
+        bgColorChangeEnableBtn.addEventListener("click", () => {
+            ptag.addEventListener("mouseover", bgColorChange);
+            ptag.addEventListener("mouseout", () => ptag.style.backgroundColor = "white");
+        });
+        bgColorChangeDiableBtn.addEventListener("click", () => {
+            ptag.removeEventListener("mouseover", bgColorChange);
+        });
+
+        txtChangeEnableBtn.addEventListener("click", () => {
+            ptag.addEventListener("mouseover", innerTextChange);
+            ptag.addEventListener("mouseout", () => ptag.innerText = "Initial");
+        });
+        txtChangeDiableBtn.addEventListener("click", () => {
+            ptag.removeEventListener("mouseover", innerTextChange);
+        });
+
+    </script>
+    <!-- <script>
+        const link = document.getElementById("link");
+        const disableLink = document.getElementById("disable-link");
+        const enableLink = document.getElementById("enable-link");
+
+        const callback = (event) => {
+            event.preventDefault();
+            alert("You have clicked the link");
+        };
+
+        disableLink.addEventListener("click", (event) => {
+            link.addEventListener("click", callback);
+        });
+
+        enableLink.addEventListener("click", (event) => {
+            link.removeEventListener("click", callback);
+            // 
+        });
+
+
+        const form = document.getElementById("form");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("we are checking something...");
+            alert("validation succeeded!");
+
+        });
+    </script> -->
+    <!-- prevent default explain one more time plzz -->
+    <!-- event object -->
+    <!-- addEventListener -->
+    <!-- removeEventListener -->
+    <!-- <script>
+        // const firstParagraph = document.getElementById("first-1");
+        // const changeColorBtn = document.getElementById("change-color-btn");
+        // changeColorBtn.addEventListener("click", (event) => {
+        //     firstParagraph.style.backgroundColor = "blue";
+        //     event.target.style.backgroundColor = "yellow";
+        // })
+        // firstParagraph.addEventListener("mouseover",(event)=>{
+        //     console.log(event);
+        //     console.log(event.target);
+        //     console.log(event.target.style);
+        //     event.target.style.backgroundColor = "blue";
+        // })
+    </script> -->
+    <!-- <script>
+        const changeColorBtn = document.getElementById("change-color-btn");
+        changeColorBtn.addEventListener("click", (event) => {
+            changeColorBtn.style.backgroundColor = "yellow";
+            // event.target.style.backgroundColor = "yellow";
+            const secondParagraph = document.getElementById("second-1");
+            secondParagraph.style.backgroundColor = "blue";
+        });
+    </script> -->
+
+</body>
+
+</html>
