@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-color-light {
+            background-color: aqua;
+        }
+
+        .bg-color-dark {
+            background-color: black;
+        }
+
+        .bg-color-gray {
+            background-color: gray;
+        }
+
+        .heading-font-color-light {
+            color: black;
+        }
+
+        .heading-font-color-dark {
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-color-light">
+    <h1 class="heading-font-color-light">How are you</h1>
+    <button>change theme</button>
+    <script>
+        const button = document.querySelector('button');
+        const body = document.querySelector('body');
+        const heading = document.querySelector('h1');
+
+        button.addEventListener('click', () => {
+            body.classList.toggle('bg-color-light');
+            body.classList.toggle('bg-color-dark');
+
+            heading.classList.toggle('heading-font-color-light');
+            heading.classList.toggle('heading-font-color-dark');
+        });
+    </script>
+</body>
+
+</html>

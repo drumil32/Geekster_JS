@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes example {
+            from {
+                background-color: blue;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        /* The element to apply the animation to */
+        .add-animation {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        body {
+            height: 100px;
+        }
+
+        .body-light {
+            background-color: aqua;
+        }
+
+        .body-dark {
+            background-color: black;
+        }
+
+        .h1-dark {
+            color: white;
+        }
+
+        .h1-light {
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="body-light">
+
+    <div>
+        <div>img1</div>
+        <div>img2</div>
+        <div>white circle</div> 
+        <!-- third div should be position absoute -->
+         <!-- z-index = 100 for third div -->
+          <!-- give bg-color white -->
+           <!-- provide border-radius:100% -->
+            <!-- on button click -->
+                <!--  -->
+    </div>
+    <h1 class="h1-light">
+        This is a div element.
+    </h1>
+    <button id="toggle">Toggle</button>
+    <script>
+        const toggleButton = document.querySelector('#toggle');
+
+        const changeTheme = (event) => {
+            const bodyTag = document.querySelector('body');
+            const h1Tag = document.querySelector('h1');
+
+            bodyTag.classList.toggle("body-light");
+            bodyTag.classList.toggle("body-dark");
+
+            h1Tag.classList.toggle("h1-light");
+            h1Tag.classList.toggle("h1-dark");
+        }
+
+        toggleButton.addEventListener('click', changeTheme)
+
+        // const divTag = document.querySelector('div');
+        // divTag.classList.add('add-animation');
+
+    </script>
+</body>
+
+</html>

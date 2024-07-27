@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <select name="degree" id="degree">
+        <option value=""></option>
+        <option selected value="B.Tech">B. Tech-Text</option>
+        <option value="B.E">B.E-TExt</option>
+        <option value="MBA">MBA-TExt</option>
+        <option value="P.HD">P.HD</option>
+        <option value="MSC">MSC</option>
+    </select>
+    <h1 id="heading"></h1>
+    <script>
+        const heading = document.getElementById("heading");
+        const dropdown = document.getElementById("degree");
+        dropdown.addEventListener("change", (event)=>{
+            heading.innerText = event.target.value;
+            console.log(event.target.innerText);
+        })
+    </script> -->
+
+
+    <h1>Events In Javascript 🔥 </h1>
+    <select name="" id="category-filter">
+        <option value="all">All</option>
+        <option value="apple">Apple</option>
+        <option value="samsung">Samsung</option>
+        <option value="moto">Motorola</option>
+    </select>
+    <!-- <input type="text" name="" id=""> -->
+
+    <!-- 
+        select all products => how to do? -> getElementByClassName( " product" )
+        then run a loop on this array
+            in loop check the condition
+                if( currentElement.data-category==event.target.value ){
+                    display = block
+                }else{
+                    display = none;
+                }
+    -->
+
+    <div id="product-list">
+        <div class="product" data-category="samsung">
+            <h3>Samsung s23 Ultra</h3>
+            <p>Price: Rs.500000</p>
+        </div>
+        <div class="product" data-category="samsung">
+            <h3>Samsung s22 Ultra</h3>
+            <p>Price: Rs.400000</p>
+        </div>
+        <div class="product" data-category="samsung">
+            <h3>Samsung s21 Ultra</h3>
+            <p>Price: Rs.300000</p>
+        </div>
+        <div class="product" data-category="apple">
+            <h3>Apple Iphone 15</h3>
+            <p>Price: Rs.900000</p>
+        </div>
+        <div class="product" data-category="moto">
+            <h3>Motorola Fusion05</h3>
+            <p>Price: Rs.20000</p>
+        </div>
+    </div>
+    <script src="./index1.js"></script>
+</body>
+
+</html>
