@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        /* #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        } */
+        .container:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Drag the W3Schools image into the rectangle:</p>
+
+    <div id="div1"></div>
+    <br>
+    <img id="img1" src="img_logo.jpg" draggable="true" width="336" height="69">
+
+    <textarea name="" id="input">
+
+    </textarea>
+    <label for="bold">Bold</label>
+    <input type="checkbox" id="bold" />
+    <label for="italic">Italic</label>
+    <input type="checkbox" id="italic" />
+    <label for="underline">Under Line</label>
+    <input type="checkbox" id="underline" />
+
+    <button id="button">Add Note</button>
+
+    <script src="./index.js">
+    </script> 
+
+    <script>
+        const divTag = document.createElement("div");
+        divTag.setAttribute("id", "div1");
+        divTag.innerHTML = "Drag the W3Schools image into the rectangle.";
+        divTag.classList.add('container');
+        const body = document.getElementsByTagName("body")[0];
+        body.appendChild(divTag)
+        // const textAreaTag = document.getElementById("input");
+        // const button = document.getElementById("button");
+        // button.addEventListener("click", () => {
+        //     const bold = document.getElementById("bold").checked;
+        //     console.log(typeof bold === "boolean")
+        //     const italic = document.getElementById("italic").checked;
+        //     const underline = document.getElementById("underline").checked;
+
+        //     let note = textAreaTag.value;
+        //     if (bold) note = `<b>${note}</b>`;
+        //     if (italic) note = `<i>${note}</i>`;
+        //     if (underline) note = `<u>${note}</u>`;
+
+        //     // <u><i><b>${note}</b></i></u>
+        // })
+    </script>
+
+</body>
+
+</html> -->
