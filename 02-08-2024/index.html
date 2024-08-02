@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid black;
+            margin: 10%;
+        }
+
+        .bgColorRed {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="containerr">
+        <div isEmoji class="emoji" data-value="Happay">Happay</div>
+        <div isEmoji class="emoji" data-value="Satisfied">Satisfied</div>
+        <button isSubmit id="submit">Have A Look</button>
+    </div>
+    <div id="content" style="display: none;">
+
+    </div>
+    <script>
+        const container = document.getElementById('containerr');
+        const content = document.getElementById('content');
+        let selectedEmojiText = "";
+
+        container.addEventListener('click', function (event) {
+            console.log(event.target.getAttribute('isEmoji'))
+            if (event.target.getAttribute('isEmoji') != null) {
+                const emojiList = document.querySelectorAll(".emoji");
+                console.log(emojiList)
+                emojiList.forEach(element => {
+                    element.classList.remove("bgColorRed");
+                });
+                event.target.classList.add('bgColorRed');
+                selectedEmojiText = event.target.getAttribute("data-value");
+            } else if (event.target.getAttribute("isSubmit") != null) {
+                container.style.display = "none";
+                content.style.display = "block";
+                content.innerText = selectedEmojiText;
+            }
+        });
+    </script>
+</body>
+
+</html>

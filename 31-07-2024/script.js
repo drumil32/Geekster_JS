@@ -1,20 +1,20 @@
 let emoji_container = document.getElementById("emoje_container");
 let search_field = document.getElementById("search_field");
 
-function displayEmojee(searchQuery = ""){
-    let filteredList = emojiList.filter(function(emoji){
+function displayEmojee(searchQuery = "") {
+    let filteredList = emojiList.filter(function (emoji) {
         console.log(searchQuery, searchQuery.length);
-        if(searchQuery.length === 0){
+        if (searchQuery.length === 0) {
             return true;
         }
-        if(emoji.description.indexOf(searchQuery)!== -1){
+        if (emoji.description.indexOf(searchQuery) !== -1) {
             return true;
         }
     })
     console.log(filteredList);
     // console.log(emojiList);
     emoji_container.innerHTML = "";
-    filteredList.forEach(function(emoji){
+    filteredList.forEach(function (emoji) {
         // console.log(emoji);
         let new_row = document.createElement("tr");
         let new_emoji = document.createElement("td");
@@ -36,10 +36,9 @@ function displayEmojee(searchQuery = ""){
     })
 }
 
+window.addEventListener("load", () => displayEmojee());
 
-window.addEventListener("load", displayEmojee());
-
-search_field.addEventListener("keyup", (e)=>{
+search_field.addEventListener("keyup", (e) => {
     let value = e.target.value;
     console.log(value);
     displayEmojee(value)
