@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button value="first" class="btn">first</button>
+    <button value="second" class="btn">second</button>
+    <button value="third" class="btn">third</button>
+    <button value="fourth" class="btn">fourth</button>
+    <button value="fifth" class="btn">fifth</button>
+    <div class="btn"></div>
+
+    <script>
+        // const button = document.querySelector('button');
+        // button.addEventListener('click', (event) => {
+        //     alert('Button clicked & its text is' + event.target.getAttribute('value'));
+        // });
+        // button.addEventListener('click', (event) => {
+        //     alert('second button ' + event.target.getAttribute('value'));
+        // });
+
+        const btnList = document.querySelectorAll('.btn');
+        console.log(btnList)
+        btnList.forEach((btn) => {
+            btn.addEventListener('click', (event) => {
+                console.log(event.target);
+                alert('Button clicked & its text is' + event.target.getAttribute('value'));
+            });
+        });
+    </script>
+</body>
+
+</html>
