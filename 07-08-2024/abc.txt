@@ -1,0 +1,5 @@
+200 => Ok
+401 => unautorized
+400 => bad request
+500 => internal server error
+404 => page not found
